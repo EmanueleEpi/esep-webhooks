@@ -28,7 +28,7 @@ namespace EsepWebhook
                 return "Issue URL not found in the request body.";
             }
 
-            string payload = $"{{\"text\":\"A new issue has been created: {issueUrl}\"}}";
+            string payload = $"{{\"text\":\"Issue Created: {issueUrl}\"}}";
             var slackUrl = Environment.GetEnvironmentVariable("SLACK_URL");
 
             if (string.IsNullOrEmpty(slackUrl))
